@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  --rojo: #D32F2F;
+  --naranja: #FF9800;
+}
+
+body { font-family: 'Montserrat', sans-serif; background: #f4f4f4; margin: 0; }
+
+.header {
+  background: var(--rojo);
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo { font-family: 'Bangers', cursive; font-size: 4.5rem; color: white; margin-bottom: 20px; }
+.logo span { color: var(--naranja); }
+
+/* BOTÓN DE LOGIN MEJORADO */
+.btn-login-main {
+  font-family: 'Bangers', cursive;
+  font-size: 1.8rem;
+  padding: 15px 40px;
+  background: var(--naranja);
+  color: var(--rojo);
+  border: 4px solid white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.btn-login-main:hover {
+  transform: scale(1.1) rotate(-2deg);
+  background: white;
+  border-color: var(--naranja);
+}
+
+.main-content { display: flex; justify-content: center; gap: 30px; padding: 40px; max-width: 1200px; margin: 0 auto; }
+
+.card { background: white; border-radius: 15px; padding: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); border-top: 8px solid var(--naranja); flex: 1; }
+
+/* ESTILOS DEL HISTORIAL */
+.history-card { max-width: 1140px; margin: 0 auto 40px auto; }
+.history-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; border-bottom: 1px solid #eee; }
+.ped-info { display: flex; flex-direction: column; }
+.badge { background: #e8f5e9; color: #2e7d32; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
+
+.eta-badge {
+  margin-top: 15px;
+  background: #fff3e0;
+  padding: 15px;
+  border-radius: 10px;
+  color: #e65100;
+  text-align: center;
+  border: 2px dashed var(--naranja);
+}
