@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: block; /* Quita el centrado forzado de Vite */
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
