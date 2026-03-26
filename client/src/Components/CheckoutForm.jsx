@@ -32,20 +32,20 @@ export default function CheckoutForm({ total, cantidad, setIsPaid }) {
         const detallePedido = `${cantidad} Tacos al Pastor`;
 
         // 3. Enviar al Backend (Puerto 3000)
-        const { data } = await axios.post('http://localhost:3000/api/payments/checkout', {
+        const { data } = await axios.post('http://52.23.249.55:3000/api/payments/checkout', {
           id: paymentMethod.id,
           amount: total, // Ya viene en centavos desde App.jsx
           userEmail: userEmail,
           items: detallePedido
         });
 
-        if (data.success) {
-          // 4. Cambiar el estado visual en App.jsx
-          setIsPaid(true);
+       if (data.success) {
+            setIsPaid(true); 
+            alert("¡Pago realizado con éxito!"); 
         } else {
-          alert("El pago no pudo procesarse: " + data.message);
-        }
-      } catch (err) {
+            alert("El pago no pudo procesarse: " + data.message);
+        } 
+    } catch (err) {
         console.error("Error en la conexión con el servidor", err);
         alert("Error crítico en el servidor.");
       }

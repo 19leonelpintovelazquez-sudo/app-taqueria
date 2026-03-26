@@ -13,7 +13,7 @@ router.post('/checkout', async (req, res) => {
             currency: "MXN",
             payment_method: id,
             confirm: true,
-            return_url: "http://localhost:5173"
+            return_url: "https://d34s0mc1iu6i8n.cloudfront.net"
         });
 
         // 2. Si el pago fue exitoso, guardamos en MongoDB (Módulo de Persistencia)
