@@ -32,7 +32,7 @@ export default function CheckoutForm({ total, cantidad, setIsPaid }) {
         const detallePedido = `${cantidad} Tacos al Pastor`;
 
         // 3. Enviar al Backend (Puerto 3000)
-        const { data } = await axios.post('http://52.23.249.55:3000/api/payments/checkout', {
+        const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/api/payments/checkout`, {
           id: paymentMethod.id,
           amount: total, // Ya viene en centavos desde App.jsx
           userEmail: userEmail,
